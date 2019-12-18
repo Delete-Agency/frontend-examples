@@ -1,0 +1,13 @@
+$breakpoints: (
+    'tablet': 768px,
+    'desktop': 1024px,
+    'wide': 1280px
+);
+
+@each $size, $value in $breakpoints {
+    @custom-media --#{$size} (width >= #{$value});
+}
+
+@custom-media --only-mobile (width < #{map-get($breakpoints, tablet)});
+@custom-media --only-tablet (width >= #{map-get($breakpoints, tablet)}) and (width < #{map-get($breakpoints, desktop)});
+@custom-media --only-desktop (width >= #{map-get($breakpoints, desktop)}) and (width < #{map-get($breakpoints, wide)});

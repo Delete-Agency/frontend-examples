@@ -1,0 +1,24 @@
+<!doctype html>
+<html class="html can-hover" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>Document</title>
+
+    <!-- set your paths for JS and CSS -->
+    <link rel="preload" href="{{htmlWebpackPlugin.files.chunks.app.css.[0]}}" as="style">
+    <link rel="preload" href="{{htmlWebpackPlugin.files.chunks.vendors.entry}}" as="script">
+    <link rel="preload" href="{{htmlWebpackPlugin.files.chunks.app.entry}}" as="script">
+
+    <!-- here should be non render blocking approach -->
+    <link rel="stylesheet" href="{{htmlWebpackPlugin.files.chunks.app.css.[0]}}">
+</head>
+<body class="body">
+
+<!-- set your paths for JS -->
+<script defer src="{{htmlWebpackPlugin.files.chunks.vendors.entry}}"></script>
+<script defer src="{{htmlWebpackPlugin.files.chunks.app.entry}}"></script>
+</body>
+</html>

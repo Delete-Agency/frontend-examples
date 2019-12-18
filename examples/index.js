@@ -1,0 +1,5 @@
+import './table';
+
+/**
+ * init app
+ */

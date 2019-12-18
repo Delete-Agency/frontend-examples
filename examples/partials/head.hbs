@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="format-detection" content="telephone=no"/>
+<title>Document</title>
+
+<!-- set your paths for JS and CSS -->
+<link rel="preload" href="{{htmlWebpackPlugin.files.chunks.app.css.[0]}}" as="style">
+<link rel="preload" href="{{htmlWebpackPlugin.files.chunks.examples.css.[0]}}" as="style">
+<link rel="preload" href="{{htmlWebpackPlugin.files.chunks.vendors.entry}}" as="script">
+<link rel="preload" href="{{htmlWebpackPlugin.files.chunks.examples.entry}}" as="script">
+
+<link rel="stylesheet" href="{{htmlWebpackPlugin.files.chunks.app.css.[0]}}">
+<link rel="stylesheet" href="{{htmlWebpackPlugin.files.chunks.examples.css.[0]}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation-essential/6.2.2/css/foundation.min.css">
+

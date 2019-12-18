@@ -1,0 +1,56 @@
+/*
+    general layout styles
+    put .container here or other global layout classes
+
+    example:
+
+    .container {
+        max-width: $containerMaxWidth;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.html {
+    position: relative;
+    overflow-x: hidden;
+    font-size: 100%;
+
+    &.is-blocked {
+        overflow: hidden;
+    }
+
+    &.is-blocked-touch {
+        position: fixed;
+        overflow-y: scroll;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.body {
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    font-size: 100%;
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+}
