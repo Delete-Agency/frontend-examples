@@ -3,7 +3,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 
 module.exports = (isDev, isAnlz) => ({
     output: {
-        filename: '[name].[chunkhash].js'
+        filename: '[name].js'
     },
     module: {
         rules: [
@@ -55,7 +55,7 @@ module.exports = (isDev, isAnlz) => ({
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash].css'
+            filename: '[name].css'
         })
     ].concat(
         isAnlz ?

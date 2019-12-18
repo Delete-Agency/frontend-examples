@@ -8,8 +8,8 @@ module.exports = mode => ({
         examples: "./examples"
     },
     output: {
-        path: path.resolve(__dirname, "../docs/dist"),
-        publicPath: "./dist/",
+        path: path.resolve(__dirname, "../dist"),
+        publicPath: "/dist/",
         filename: "[name].js",
         jsonpFunction: "webpackJsonpDelete"
     },
@@ -89,7 +89,7 @@ module.exports = mode => ({
         }
     },
     plugins: [
-        new CleanWebpackPlugin("public/modules", {
+        new CleanWebpackPlugin("dist", {
             root: path.resolve(__dirname, "..")
         })
     ],

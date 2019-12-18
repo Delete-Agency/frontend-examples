@@ -1249,4 +1249,4 @@ for (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++
 /***/ })
 
 /******/ });
-//# sourceMappingURL=vendors.668e6b87eddfa0610524.js.map
+//# sourceMappingURL=vendors.js.map

@@ -44,4 +44,4 @@ __webpack_require__.r(__webpack_exports__);
 /***/ })
 
 },[["./examples/index.js","vendors"]]]);
-//# sourceMappingURL=examples.572af084c7ef27108171.js.map
+//# sourceMappingURL=examples.js.map

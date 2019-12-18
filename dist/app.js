@@ -61,4 +61,4 @@ files.keys().forEach(files);
 /***/ })
 
 },[["./app/index.js","vendors"]]]);
-//# sourceMappingURL=app.e8e1e617e751414e43b5.js.map
+//# sourceMappingURL=app.js.map
