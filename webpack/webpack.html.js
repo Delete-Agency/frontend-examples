@@ -8,7 +8,7 @@ module.exports = () => {
 
     return {
         plugins: [
-            new CleanWebpackPlugin('public/modules', {
+            new CleanWebpackPlugin('docs/modules', {
                 root: path.resolve(__dirname, '..')
             }),
             new HtmlWebpackPlugin({
