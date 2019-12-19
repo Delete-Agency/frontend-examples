@@ -21,7 +21,7 @@ module.exports = (env, argv) => {
             baseConfig(),
             staticConfig(isDev, isAnalyze),
             devConfig(),
-            isHtml ? htmlConfig() : null
+            htmlConfig()
         );
     }
 

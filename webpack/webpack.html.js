@@ -11,19 +11,7 @@ module.exports = () => {
             new CleanWebpackPlugin('/modules', {
                 root: path.resolve(__dirname, '..')
             }),
-            new HtmlWebpackPlugin({
-                template: './examples/index.hbs',
-                filename: '../index.html',
-                inject: false,
-                alwaysWriteToDisk: true
-            }),
-            new HtmlWebpackPlugin({
-                template: './examples/table/index.hbs',
-                filename: '../modules/table.html',
-                inject: false,
-                alwaysWriteToDisk: true
-            }),
-            new HtmlWebpackHarddiskPlugin()
+
         ]
     };
 };

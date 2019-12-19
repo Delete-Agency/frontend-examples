@@ -1,6 +1,7 @@
 const path = require("path");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const ASSET_PATH = process.env.ASSET_PATH || '/dist/';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 module.exports = mode => ({
     devtool: "source-map",
@@ -9,8 +10,8 @@ module.exports = mode => ({
         examples: "./examples"
     },
     output: {
-        path: path.resolve(__dirname, "../dist"),
-        publicPath: ASSET_PATH,
+        path: path.resolve(__dirname, "../docs/dist"),
+        publicPath: '/dist/',
         filename: "[name].js",
         jsonpFunction: "webpackJsonpDelete"
     },
@@ -90,9 +91,22 @@ module.exports = mode => ({
         }
     },
     plugins: [
-        new CleanWebpackPlugin("dist", {
+        new CleanWebpackPlugin("docs", {
             root: path.resolve(__dirname, "..")
-        })
+        }),
+        new HtmlWebpackPlugin({
+            template: './examples/index.hbs',
+            filename: '../index.html',
+            inject: false,
+            alwaysWriteToDisk: true
+        }),
+        new HtmlWebpackPlugin({
+            template: './examples/table/index.hbs',
+            filename: '../table.html',
+            inject: false,
+            alwaysWriteToDisk: true
+        }),
+        new HtmlWebpackHarddiskPlugin()
     ],
     stats: {
         children: false

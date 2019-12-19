@@ -1,14 +1,14 @@
 {
+    "homepage": "https://github.com/Delete-Agency/frontend-examples.git",
     "name": "delete-ui-examples",
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-        "server": "webpack-dev-server --env.server process.env.ASSET_PATH='\\\"/dist/\\\"' --mode=development",
-        "dev": "webpack --mode=development",
-        "dev:watch": "webpack --watch --mode=development",
-        "dev:html": "webpack --env.html --mode=development",
-        "prod:html": "webpack --env.html process.env.ASSET_PATH='\\\"/frontend-examples/dist/\\\"' --mode=production"
+        "server": "webpack-dev-server --env.server --mode=development",
+        "dev": "webpack --env.html --mode=development",
+        "dev:watch": "webpack --watch --env.html --mode=development",
+        "prod:html": "webpack --env.html --mode=production"
     },
     "devDependencies": {
         "@babel/core": "7.0.0",
@@ -56,7 +56,8 @@
         "webpack-merge": "4.1.4"
     },
     "dependencies": {
-        "@babel/polyfill": "7.0.0"
+        "@babel/polyfill": "7.0.0",
+        "gh-pages": "^2.1.1"
     },
     "browserslist": [
         "ios >= 10",

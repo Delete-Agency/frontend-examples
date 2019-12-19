@@ -1,6 +1,8 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const PostCssPipelineWebpackPlugin = require('./plugins/postcss-pipeline-webpack-plugin');
 const cssnano = require('cssnano');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 module.exports = (env) => {
     console.log('\nPRODUCTION BUILD\n');
@@ -48,7 +50,20 @@ module.exports = (env) => {
                         }
                     })
                 ]
-            })
+            }),
+            new HtmlWebpackPlugin({
+                template: './examples/index.hbs',
+                filename: '../index.html',
+                inject: false,
+                alwaysWriteToDisk: true
+            }),
+            new HtmlWebpackPlugin({
+                template: './examples/table/index.hbs',
+                filename: '../modules/table.html',
+                inject: false,
+                alwaysWriteToDisk: true
+            }),
+            new HtmlWebpackHarddiskPlugin()
         ]
     };
 };
