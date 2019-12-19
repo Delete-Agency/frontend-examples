@@ -1,5 +1,6 @@
 const path = require("path");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
+const ASSET_PATH = process.env.ASSET_PATH || '/dist/';
 
 module.exports = mode => ({
     devtool: "source-map",
@@ -9,7 +10,7 @@ module.exports = mode => ({
     },
     output: {
         path: path.resolve(__dirname, "../dist"),
-        publicPath: "/frontend-examples/dist/",
+        publicPath: ASSET_PATH,
         filename: "[name].js",
         jsonpFunction: "webpackJsonpDelete"
     },

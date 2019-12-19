@@ -4,9 +4,11 @@
     "main": "index.js",
     "license": "MIT",
     "scripts": {
+        "server": "webpack-dev-server --env.server process.env.ASSET_PATH='\\\"/dist/\\\"' --mode=development",
         "dev": "webpack --mode=development",
         "dev:watch": "webpack --watch --mode=development",
-        "dev:html": "webpack --env.html --mode=development"
+        "dev:html": "webpack --env.html --mode=development",
+        "prod:html": "webpack --env.html process.env.ASSET_PATH='\\\"/frontend-examples/dist/\\\"' --mode=production"
     },
     "devDependencies": {
         "@babel/core": "7.0.0",

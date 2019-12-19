@@ -11,7 +11,8 @@ module.exports = () => {
             hot: true,
             stats: {
                 children: false
-            }
+            },
+            open: true
         },
         module: {
             rules: [
