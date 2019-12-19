@@ -11,7 +11,7 @@ module.exports = mode => ({
     },
     output: {
         path: path.resolve(__dirname, "../docs/dist"),
-        publicPath: '/dist/',
+        publicPath: 'dist/',
         filename: "[name].js",
         jsonpFunction: "webpackJsonpDelete"
     },

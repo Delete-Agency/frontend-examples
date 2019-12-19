@@ -8,36 +8,39 @@
     <title>Document</title>
     
     <!-- set your paths for JS and CSS -->
-    <link rel="preload" href="/dist/app.css" as="style">
-    <link rel="preload" href="/dist/examples.css" as="style">
-    <link rel="preload" href="/dist/vendors.js" as="script">
-    <link rel="preload" href="/dist/examples.js" as="script">
+    <link rel="preload" href="dist/app.css" as="style">
+    <link rel="preload" href="dist/examples.css" as="style">
+    <link rel="preload" href="dist/vendors.js" as="script">
+    <link rel="preload" href="dist/examples.js" as="script">
     
-    <link rel="stylesheet" href="/dist/app.css">
-    <link rel="stylesheet" href="/dist/examples.css">
+    <link rel="stylesheet" href="dist/app.css">
+    <link rel="stylesheet" href="dist/examples.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation-essential/6.2.2/css/foundation.min.css">
     
 </head>
 <body class="body">
 <div class="container">
-<section>
+<section class="p-3">
     <div class="row">
-        <h1>Frontend Examples</h1>
-        <h2>Stars</h2>
+        <div class="container">
+            <h1>Frontend Examples</h1>
+        </div>
     </div>
 </section>
 <section>
     <div class="row">
-        <ul>
-            <li>
-                <a href="/table.html">Table</a>
-            </li>
-        </ul>
+        <div class="container">
+            <ol>
+                <li>
+                    <a href="/table.html">Table</a>
+                </li>
+            </ol>
+        </div>
     </div>
 </section>
 </div>
 
-<script defer src="/dist/vendors.js"></script>
-<script defer src="/dist/examples.js"></script>
+<script defer src="dist/vendors.js"></script>
+<script defer src="dist/examples.js"></script>
 </body>
 </html>
